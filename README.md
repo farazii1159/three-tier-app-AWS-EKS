@@ -68,6 +68,7 @@ Databases
  ├─ Redis
  └─ RabbitMQ
 ```
+---
 
 <p align="center">
   <img src="images/img1.png" width="600" height="400">
@@ -116,6 +117,12 @@ After a successful payment, the **Shipping** and **Dispatch** services coordinat
 
 ### 📄 7. Order Completion
 The application generates a unique **Order ID**, confirming that the purchase has been successfully completed.
+
+---
+
+<p align="center">
+  <img src="images/img2.png" width="600" height="400">
+</p>
 
 ---
 
