@@ -452,8 +452,6 @@ With the infrastructure successfully configured, the next step is to deploy the 
 
 The Helm chart contains all Kubernetes manifests required to deploy the complete application, including Deployments, StatefulSets, Services, ConfigMaps, Persistent Volume Claims, and Ingress resources.
 
----
-
 ### Step 5: Navigate to the Helm Chart Directory
 
 Navigate to the Helm directory inside the cloned repository.
@@ -461,8 +459,6 @@ Navigate to the Helm directory inside the cloned repository.
 ```bash
 cd three-tier-architecture-demo/EKS/helm
 ```
-
----
 
 ### Create a Dedicated Namespace
 
@@ -512,8 +508,6 @@ kubectl apply -f ingress.yaml
 ```
 
 The AWS Load Balancer Controller automatically provisions an Application Load Balancer (ALB) for the Ingress resource.
-
----
 
 ## Verify the Ingress
 
