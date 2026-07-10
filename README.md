@@ -27,6 +27,8 @@ This project demonstrates how to deploy Stan's Robot Shop on Amazon Elastic Kube
 - [Learning Outcomes](#-learning-outcomes)
 - [Conclusion](#-conclusion)
 
+---
+
 ## 🚀 Features
 
 - Amazon EKS deployment
@@ -37,6 +39,8 @@ This project demonstrates how to deploy Stan's Robot Shop on Amazon Elastic Kube
 - MongoDB, MySQL, Redis, RabbitMQ
 - Production-style microservices
 - Local Docker Compose testing
+
+---
 
 ## 🏗 Architecture
 
@@ -64,6 +68,7 @@ Databases
  ├─ Redis
  └─ RabbitMQ
 ```
+--- 
 
 ## 🛠 Tech Stack
 
@@ -79,6 +84,8 @@ Databases
 | Backend | Node.js, Java, Go, Python, PHP |
 | Databases | MongoDB, MySQL, Redis |
 | Messaging | RabbitMQ |
+
+---
 
 ## 🛒 How the Application Works
 
@@ -117,6 +124,8 @@ Ensure the following tools are installed and configured on your machine before b
 * **Helm:** For package management and application deployment.
 * **kubectl:** To interact with the Kubernetes cluster.
 
+---
+
 ## 🐳 Local Deployment with Docker Compose
 
 Before deploying the application to **Amazon EKS**, it is recommended to test the application locally. This ensures that all microservices are functioning correctly before moving to the cloud.
@@ -133,7 +142,7 @@ git clone https://github.com/iam-veeramalla/three-tier-architecture-demo.git
 cd three-tier-architecture-demo
 ```
 
----
+
 
 ## 📦 Step 2: Pull Docker Images
 
@@ -143,7 +152,7 @@ Download all required Docker images from Docker Hub.
 docker-compose pull
 ```
 
----
+
 
 ## 🚀 Step 3: Start the Application
 
@@ -153,7 +162,6 @@ Start all containers using Docker Compose.
 docker compose up -d
 ```
 
----
 
 ## 🔍 Step 4: Verify Running Containers
 
@@ -162,8 +170,6 @@ Ensure all containers are running successfully.
 ```bash
 docker ps
 ```
-
----
 
 ## 🌐 Step 5: Access the Application
 
@@ -177,7 +183,7 @@ If everything is working correctly, the **Robot Shop** homepage should load succ
 
 ---
 
-## 🧹 Remove Containers and Volumes (Optional)
+## 🧹 Remove Containers and Volume
 
 To completely clean up the local environment:
 
