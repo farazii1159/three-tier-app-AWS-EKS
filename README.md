@@ -215,11 +215,12 @@ After the cluster has been created successfully, verify its status.
 ```bash
 kubectl get nodes
 ```
-
 ---
 
 ## 🔐 Step 2: Configure IAM OIDC Provider
 Amazon EKS uses an IAM OIDC provider to enable IAM Roles for Service Accounts (IRSA). This allows Kubernetes service accounts to securely access AWS services without storing long-term AWS credentials.
+
+---
 
 ### Export the Cluster Name
 
@@ -235,6 +236,8 @@ export cluster_name=demo-cluster-three-tier-1
 oidc_id=$(aws eks describe-cluster --name $cluster_name --query "cluster.identity.oidc.issuer" --output text | cut -d '/' -f 5)
 ```
 
+---
+
 ### Verify Whether an OIDC Provider Already Exists
 
 Before creating a new provider, check whether one is already associated with the cluster.
@@ -246,6 +249,8 @@ aws iam list-open-id-connect-providers | grep $oidc_id | cut -d "/" -f4
 If the command returns the OIDC ID, the provider is already configured and you can proceed to the next step.
 
 If the command returns no output, associate the IAM OIDC provider using the following command.
+
+---
 
 ### Associate the IAM OIDC Provider
 
