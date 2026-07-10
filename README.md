@@ -163,7 +163,11 @@ Download all required Docker images from Docker Hub.
 ```bash
 docker-compose pull
 ```
+---
 
+<p align="center">
+  <img src="images/img3.png" width="600" height="410">
+</p>
 
 
 ## 🚀 Step 3: Start the Application
@@ -190,6 +194,20 @@ Open your browser and navigate to:
 ```
 http://localhost:8080
 ```
+
+---
+
+<p align="center">
+  <img src="images/img4.png" width="600" height="410">
+</p>
+
+<p align="center">
+  <img src="images/img5.png" width="600" height="410">
+</p>
+
+<p align="center">
+  <img src="images/img6.png" width="600" height="410">
+</p>
 
 If everything is working correctly, the **Robot Shop** homepage should load successfully.
 
