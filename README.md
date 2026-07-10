@@ -468,7 +468,7 @@ kubectl create namespace robot-shop
 
 ---
 
-### ⚙️ Deploy the Application Using Helm
+### Deploy the Application Using Helm
 
 Install the Helm chart.
 
