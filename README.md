@@ -518,7 +518,7 @@ kubectl get ingress -n robot-shop
 
 ## Wait for the Load Balancer
 
-Provisioning the AWS Application Load Balancer typically takes **5–10 minutes**.
+> Provisioning the AWS Application Load Balancer typically takes **5–10 minutes**.
 
 You can monitor its status using:
 
