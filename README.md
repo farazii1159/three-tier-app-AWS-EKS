@@ -397,7 +397,7 @@ Without the EBS CSI Driver, StatefulSets cannot automatically create or attach p
 
 ---
 
-## Create the IAM Role for the Amazon EBS CSI Driver
+### Create the IAM Role for the Amazon EBS CSI Driver
 
 Create an IAM Service Account with the required permissions.
 
@@ -414,7 +414,7 @@ eksctl create iamserviceaccount \
 
 ---
 
-## Install the Amazon EBS CSI Add-on
+### Install the Amazon EBS CSI Add-on
 
 > **Replace `<AWS_ACCOUNT_ID>` with your AWS Account ID before running the command.**
 
@@ -428,7 +428,7 @@ eksctl create addon \
 
 ---
 
-## Verify the Installation
+### Verify the Installation
 
 Verify that the CSI Driver pods are running.
 
@@ -509,14 +509,14 @@ kubectl apply -f ingress.yaml
 
 The AWS Load Balancer Controller automatically provisions an Application Load Balancer (ALB) for the Ingress resource.
 
-## Verify the Ingress
+### Verify the Ingress
 
 ```bash
 kubectl get ingress -n robot-shop
 ```
 ---
 
-## Wait for the Load Balancer
+### Wait for the Load Balancer
 
 > Provisioning the AWS Application Load Balancer typically takes **5–10 minutes**.
 
