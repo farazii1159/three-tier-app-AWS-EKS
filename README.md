@@ -268,8 +268,6 @@ The **AWS Load Balancer Controller** automatically provision and manage **AWS Ap
 
 This controller is an essential component for running production workloads on Amazon EKS.
 
----
-
 ### Download the IAM Policy
 
 Download the IAM policy required by the AWS Load Balancer Controller.
@@ -311,7 +309,7 @@ eksctl create iamserviceaccount \
 --namespace kube-system \  
 --name aws-load-balancer-controller \
 --role-name AmazonEKSLoadBalancerControllerRole \
---attach-policy-arn arn:aws:iam::<AWS_ACCOUNT_ID>:policy/AWSLoadBalancerControllerIAMPolicy \
+--attach-policy-arn arn:aws:iam::<AWS_ACCOUNT_ID>:policy/    AWSLoadBalancerControllerIAMPolicy \
 --approve
 ```
 
@@ -333,7 +331,7 @@ aws-load-balancer-controller
 
 ---
 
-### Add the Helm Repository
+## Add the Helm Repository
 
 The AWS Load Balancer Controller is distributed as a Helm chart. First, add the official AWS EKS Helm repository and update the local repository index.
 
@@ -372,9 +370,6 @@ After the installation completes, verify that the deployment is running.
 ```bash
 kubectl get deployment -n kube-system aws-load-balancer-controller
 ```
-
----
-
 
 You can also verify the running pods.
 
