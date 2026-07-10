@@ -1,3 +1,68 @@
+# Robot Shop: Three-Tier E-Commerce on AWS EKS
+
+This project demonstrates how to deploy a comprehensive, microservices-based e-commerce application ("Stan's Robot Shop") onto an AWS Elastic Kubernetes Service (EKS) cluster. The architecture includes 8 microservices, 2 databases, and utilizes modern DevOps tools like Helm, Terraform (optional), and AWS Load Balancer Controller.
+
+## 🚀 Project Overview
+
+This application mimics a real-world production environment with a three-tier architecture (Frontend, Logic, Backend). It serves as a practical guide for engineers looking to master Kubernetes orchestration, persistent storage, and cloud-native networking.
+
+### Tech Stack
+
+| Component | Technology |
+| :--- | :--- |
+| **Frontend** | AngularJS (1.x) |
+| **Logic Layer** | Node.js, Java (Spring Boot), Python (Flask), Go, PHP |
+| **Databases** | MongoDB, MySQL, Redis (in-memory store StatefulSets in EKS, backed by EBS volumes) |
+| **Orchestration** | AWS EKS, Kubernetes, Helm |
+| **Networking** | AWS Load Balancer Controller (ALB), Nginx |
+
+---
+
+## 📋 Prerequisites
+
+Ensure the following tools are installed and configured on your machine before beginning:
+
+* **Docker:** For building and testing images locally.
+* **AWS CLI:** Configured with appropriate permissions.
+* **eksctl:** For EKS cluster lifecycle management.
+* **Helm:** For package management and application deployment.
+* **kubectl:** To interact with the Kubernetes cluster.
+
+---
+
+## 🛒 How the App Works
+Stan’s Robot Shop simulates a real e-commerce workflow:
+
+Homepage → Navigate to the landing page.
+
+Register/Login → Create an account and log in.
+
+Catalog → Browse available robots.
+
+Cart → Add items to your shopping cart.
+
+Checkout → Complete the purchase.
+
+Payment → Finalize the order and receive an Order ID.
+
+Instead of bundling everything into a monolithic codebase, the app is broken down into independent microservices such as login, register, catalog, cart, payment, etc. This modular design allows teams to update or scale features individually without risking the entire application.
+
+---
+
+## 🛠 Deployment Guide
+
+### 1. Clone the Repository
+```bash
+git clone [https://github.com/iam-veeramalla/three-tier-architecture-demo](https://github.com/iam-veeramalla/three-tier-architecture-demo)
+cd three-tier-architecture-demo
+
+
+
+
+
+
+------------------------------------------------
+
 # Three Tier Architecture Deployment on AWS EKS
 
 Stan's Robot Shop is a sample microservice application you can use as a sandbox to test and learn containerised application orchestration and monitoring techniques. It is not intended to be a comprehensive reference example of how to write a microservices application, although you will better understand some of those concepts by playing with Stan's Robot Shop. To be clear, the error handling is patchy and there is not any security built into the application.
