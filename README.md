@@ -71,7 +71,7 @@ Databases
 ---
 
 <p align="center">
-  <img src="images/img1.png" width="600" height="400">
+  <img src="images/img1.png" width="600" height="410">
 </p>
 
 --- 
@@ -121,7 +121,7 @@ The application generates a unique **Order ID**, confirming that the purchase ha
 ---
 
 <p align="center">
-  <img src="images/img2.png" width="600" height="400">
+  <img src="images/img2.png" width="600" height="410">
 </p>
 
 ---
