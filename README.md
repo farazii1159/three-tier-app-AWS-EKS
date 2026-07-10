@@ -220,7 +220,6 @@ kubectl get nodes
 ## 🔐 Step 2: Configure IAM OIDC Provider
 Amazon EKS uses an IAM OIDC provider to enable IAM Roles for Service Accounts (IRSA). This allows Kubernetes service accounts to securely access AWS services without storing long-term AWS credentials.
 
----
 
 ### Export the Cluster Name
 
