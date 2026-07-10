@@ -331,7 +331,7 @@ aws-load-balancer-controller
 
 ---
 
-## Add the Helm Repository
+## 📥 Add the Helm Repository
 
 The AWS Load Balancer Controller is distributed as a Helm chart. First, add the official AWS EKS Helm repository and update the local repository index.
 
@@ -468,7 +468,7 @@ kubectl create namespace robot-shop
 
 ---
 
-### Deploy the Application Using Helm
+### ⚙️ Deploy the Application Using Helm
 
 Install the Helm chart.
 
