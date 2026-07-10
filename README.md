@@ -68,6 +68,11 @@ Databases
  ├─ Redis
  └─ RabbitMQ
 ```
+
+<p align="center">
+  <img src="images/img1.png" width="900"/>
+</p>
+
 --- 
 
 ## 🛠 Tech Stack
