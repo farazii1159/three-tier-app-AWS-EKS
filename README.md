@@ -70,7 +70,7 @@ Databases
 ```
 
 <p align="center">
-  <img src="images/img1.png" width="600" height="380">
+  <img src="images/img1.png" width="600" height="400">
 </p>
 
 --- 
