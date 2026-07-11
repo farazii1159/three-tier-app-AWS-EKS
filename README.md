@@ -299,7 +299,7 @@ eksctl utils associate-iam-oidc-provider
 ---
 
 <p align="center">
-  <img src="images/img8.png" width="600" height="410">
+  <img src="images/img8.png" width="630" height="410">
 </p>
 
 ---
@@ -358,7 +358,7 @@ eksctl create iamserviceaccount \
 ---
 
 <p align="center">
-  <img src="images/img8.png" width="600" height="410">
+  <img src="images/img9.png" width="630" height="410">
 </p>
 
 ---
