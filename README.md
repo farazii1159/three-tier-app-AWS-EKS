@@ -347,11 +347,11 @@ Create an IAM Service Account for the AWS Load Balancer Controller.
 
 ```bash
 eksctl create iamserviceaccount \
---cluster demo-cluster-three-tier-1 \
---namespace kube-system \  
---name aws-load-balancer-controller \
+--cluster=demo-cluster-three-tier-1 \
+--namespace=kube-system \  
+--name=aws-load-balancer-controller \
 --role-name AmazonEKSLoadBalancerControllerRole \
---attach-policy-arn arn:aws:iam::<AWS_ACCOUNT_ID>:policy/    AWSLoadBalancerControllerIAMPolicy \
+--attach-policy-arn=arn:aws:iam:: <AWS_ACCOUNT_ID>:policy/AWSLoadBalancerControllerIAMPolicy \
 --approve
 ```
 
@@ -386,7 +386,7 @@ The AWS Load Balancer Controller is distributed as a Helm chart. First, add the 
 ```bash
 helm repo add eks https://aws.github.io/eks-charts
 
-helm repo update
+helm repo update eks
 ```
 
 ---
@@ -400,8 +400,7 @@ Install the controller into the **kube-system** namespace using Helm.
 > **Before running the command, replace `<YOUR_VPC_ID>` with the VPC ID where your EKS cluster is deployed.**
 
 ```bash
-helm install aws-load-balancer-controller eks/aws-load-balancer-controller \
--n kube-system \
+helm install aws-load-balancer-controller eks/aws-load-balancer-controller -n kube-system \
 --set clusterName=demo-cluster-three-tier-1 \
 --set serviceAccount.create=false \
 --set serviceAccount.name=aws-load-balancer-controller \
@@ -418,6 +417,14 @@ After the installation completes, verify that the deployment is running.
 ```bash
 kubectl get deployment -n kube-system aws-load-balancer-controller
 ```
+
+---
+
+<p align="center">
+  <img src="images/img10.png" width="630" height="410">
+</p>
+
+---
 
 You can also verify the running pods.
 
