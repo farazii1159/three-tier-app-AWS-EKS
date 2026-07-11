@@ -239,6 +239,7 @@ This command provisions an Amazon EKS cluster named `demo-cluster-three-tier-1` 
 > **Note:** Cluster creation typically takes **10–15 minutes**, depending on your AWS account and region.
 
 ---
+
 <p align="center">
   <img src="images/img7.png" width="600" height="410">
 </p>
@@ -295,6 +296,12 @@ eksctl utils associate-iam-oidc-provider
 --approve
 
 ```
+
+---
+
+<p align="center">
+  <img src="images/img8.png" width="600" height="410">
+</p>
 
 ---
 
