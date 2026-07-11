@@ -296,7 +296,6 @@ eksctl utils associate-iam-oidc-provider
 --approve
 
 ```
-
 ---
 
 <p align="center">
