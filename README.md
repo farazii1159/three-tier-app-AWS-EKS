@@ -482,6 +482,11 @@ eksctl create addon \
 ```
 
 ---
+<p align="center">
+  <img src="images/img11.png" width="630" height="410">
+</p>
+
+---
 
 ### Verify the Installation
 
