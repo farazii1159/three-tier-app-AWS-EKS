@@ -523,7 +523,7 @@ cd three-tier-architecture-demo/EKS/helm
 ### Create a Dedicated Namespace
 
 ```bash
-kubectl create namespace robot-shop
+kubectl create ns robot-shop
 ```
 
 ---
@@ -533,8 +533,8 @@ kubectl create namespace robot-shop
 Install the Helm chart.
 
 ```bash
-helm install robot-shop . \  
-  --namespace robot-shop
+helm install robot-shop --namespace robot-shop .
+
 ```
 
 ---
@@ -546,6 +546,13 @@ Verify that all Pods are running successfully.
 ```bash
 kubectl get pods -n robot-shop
 ```
+---
+
+<p align="center">
+  <img src="images/img12.png" width="630" height="410">
+</p>
+
+---
 
 Verify that the Kubernetes Services have been created successfully.
 
