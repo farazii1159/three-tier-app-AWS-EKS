@@ -599,9 +599,14 @@ Open the ALB DNS name in your web browser.
 <p align="center">
   <img src="images/img13.png" width="630" height="410">
 </p>
----
 
 If the deployment was successful, the **Robot Shop** application homepage should be displayed.
+
+---
+
+<p align="center">
+  <img src="images/img14.png" width="630" height="410">
+</p>
 
 ---
 
@@ -617,6 +622,12 @@ Perform a quick functionality test to ensure that all services are working corre
 - Complete an order successfully
 
 Successful completion of these steps confirms that the microservices are communicating correctly and that the application has been deployed successfully on Amazon EKS.
+
+---
+
+<p align="center">
+  <img src="images/img5(2).png" width="630" height="410">
+</p>
 
 ---
 
