@@ -291,9 +291,7 @@ If the command returns no output, associate the IAM OIDC provider using the foll
 ### Associate the IAM OIDC Provider
 
 ```bash
-eksctl utils associate-iam-oidc-provider 
---cluster $cluster_name 
---approve
+eksctl utils associate-iam-oidc-provider --cluster $cluster_name --approve
 
 ```
 ---
@@ -596,6 +594,12 @@ You can monitor its status using:
 Once the ALB status changes to **Active**, copy its **DNS Name**.
 
 Open the ALB DNS name in your web browser.
+
+---
+<p align="center">
+  <img src="images/img13.png" width="630" height="410">
+</p>
+---
 
 If the deployment was successful, the **Robot Shop** application homepage should be displayed.
 
