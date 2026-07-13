@@ -503,7 +503,7 @@ The Helm chart contains all Kubernetes manifests required to deploy the complete
 Navigate to the Helm directory inside the cloned repository.
 
 ```bash
-cd three-tier-architecture-demo/EKS/helm
+cd three-tier-application-AWS-EKS/EKS/helm
 ```
 
 ### Create a Dedicated Namespace
@@ -625,7 +625,7 @@ To avoid unnecessary AWS charges, delete all resources created during this proje
 
 
 ```bash
-eksctl delete cluster --name demo-cluster-three-tier-1 --region us-east-1
+eksctl delete cluster --name demo-cluster-three-tier-1 --region us-east-2
 ```
 
 This command deletes the EKS cluster and all associated AWS resources to help avoid unnecessary charges.
