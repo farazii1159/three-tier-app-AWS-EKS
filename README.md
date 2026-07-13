@@ -230,12 +230,15 @@ Now that we've tested the application locally, it’s time to deploy it on a ful
 We'll start by creating an EKS cluster using eksctl. This tool simplifies EKS cluster creation and management.
 
 ```bash
-eksctl create cluster 
---name demo-cluster-three-tier-1 
---region us-east-1
+
+ eksctl create cluster \
+  --name demo-cluster-three-tier-1 \
+  --region us-east-1
+
+eksctl create cluster --name demo-cluster-three-tier-1 --region us-east-1
 ```
 
-This command provisions an Amazon EKS cluster named `demo-cluster-three-tier-1` in the `us-east-1` (N. Virginia) region.
+This command provisions an Amazon EKS cluster named `demo-cluster-three-tier-1` in the `us-east-2` (Ohio) region.
 > **Note:** Cluster creation typically takes **10–15 minutes**, depending on your AWS account and region.
 
 ---
@@ -284,9 +287,10 @@ aws iam list-open-id-connect-providers | grep $oidc_id | cut -d "/" -f4
 
 If the command returns the OIDC ID, the provider is already configured and you can proceed to the next step.
 
-If the command returns no output, associate the IAM OIDC provider using the following command.
-
 ---
+
+
+If the command returns no output, associate the IAM OIDC provider using the following command.
 
 ### Associate the IAM OIDC Provider
 
@@ -341,16 +345,10 @@ Save the policy ARN, as it will be required when creating the IAM service accoun
 
 Create an IAM Service Account for the AWS Load Balancer Controller.
 
-> **Replace `<AWS_ACCOUNT_ID>` with your AWS Account ID.**
+> **Replace `<Cluster Name>` and `<AWS_ACCOUNT_ID>` with your own Cluster Name AWS Account ID.**
 
 ```bash
-eksctl create iamserviceaccount \
---cluster=demo-cluster-three-tier-1 \
---namespace=kube-system \  
---name=aws-load-balancer-controller \
---role-name AmazonEKSLoadBalancerControllerRole \
---attach-policy-arn=arn:aws:iam:: <AWS_ACCOUNT_ID>:policy/AWSLoadBalancerControllerIAMPolicy \
---approve
+eksctl create iamserviceaccount --cluster=<Cluster Name> --namespace=kube-system --name=aws-load-balancer-controller --role-name AmazonEKSLoadBalancerControllerRole --attach-policy-arn=arn:aws:iam::<AWS_ACCOUNT_ID>:policy/AWSLoadBalancerControllerIAMPolicy --approve
 ```
 
 ---
@@ -637,9 +635,7 @@ To avoid unnecessary AWS charges, delete all resources created during this proje
 
 
 ```bash
-eksctl delete cluster \
- --name demo-cluster-three-tier-1 \
- --region us-east-1
+eksctl delete cluster --name demo-cluster-three-tier-1 --region us-east-1
 ```
 
 This command deletes the EKS cluster and all associated AWS resources to help avoid unnecessary charges.
