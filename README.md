@@ -421,16 +421,6 @@ kubectl get deployment -n kube-system aws-load-balancer-controller
 
 ---
 
-You can also verify the running pods.
-
-```bash
-kubectl get pods -n kube-system
-```
-
-The deployment is successful when all controller Pods are in the `Running` state.
-
----
-
 ## 💾 Step 4: Configure the Amazon EBS CSI Driver
 
 Many applications require **persistent storage** to retain data even if Pods are restarted or rescheduled.
@@ -450,12 +440,13 @@ Without the EBS CSI Driver, StatefulSets cannot automatically create or attach p
 ### Create the IAM Role for the Amazon EBS CSI Driver
 
 Create an IAM Service Account with the required permissions.
+> **Replace `<CLUSTER-NAME>` with your Cluster
 
 ```bash
 eksctl create iamserviceaccount \
 --name ebs-csi-controller-sa \
 --namespace kube-system \
---cluster demo-cluster-three-tier-1 \
+--cluster <CLUSTER-NAME> \
 --role-name AmazonEKS_EBS_CSI_DriverRole \
 --role-only \
 --attach-policy-arn arn:aws:iam::aws:policy/service-role/AmazonEBSCSIDriverPolicy \
@@ -466,12 +457,12 @@ eksctl create iamserviceaccount \
 
 ### Install the Amazon EBS CSI Add-on
 
-> **Replace `<AWS_ACCOUNT_ID>` with your AWS Account ID before running the command.**
+> **Replace `<CLUSTER-NAME>` and `<AWS_ACCOUNT_ID>` with your own CLUSTER-NAME and Account ID before running the command.**
 
 ```bash
 eksctl create addon \
 --name aws-ebs-csi-driver \
---cluster demo-cluster-three-tier-1 \
+--cluster <CLUSTER-NAME> \
 --service-account-role-arn arn:aws:iam::<AWS_ACCOUNT_ID>:role/AmazonEKS_EBS_CSI_DriverRole \
 --force
 ```
