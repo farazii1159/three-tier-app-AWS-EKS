@@ -263,6 +263,8 @@ Amazon EKS uses an IAM OIDC provider to enable IAM Roles for Service Accounts (I
 
 ### Export the Cluster Name
 
+> **Replace with your Cluster Name export cluster_name=<CLUSTER-NAME>**
+
 ```bash
 export cluster_name=demo-cluster-three-tier-1
 ```
@@ -345,10 +347,10 @@ Save the policy ARN, as it will be required when creating the IAM service accoun
 
 Create an IAM Service Account for the AWS Load Balancer Controller.
 
-> **Replace `<Cluster Name>` and `<AWS_ACCOUNT_ID>` with your own Cluster Name AWS Account ID.**
+> **Replace `<CLUSTER-NAME>` and `<AWS_ACCOUNT_ID>` with your own CLUSTER-NAME and AWS Account ID.**
 
 ```bash
-eksctl create iamserviceaccount --cluster=<Cluster Name> --namespace=kube-system --name=aws-load-balancer-controller --role-name AmazonEKSLoadBalancerControllerRole --attach-policy-arn=arn:aws:iam::<AWS_ACCOUNT_ID>:policy/AWSLoadBalancerControllerIAMPolicy --approve
+eksctl create iamserviceaccount --cluster=<CLUSTER-NAME> --namespace=kube-system --name=aws-load-balancer-controller --role-name AmazonEKSLoadBalancerControllerRole --attach-policy-arn=arn:aws:iam::<AWS_ACCOUNT_ID>:policy/AWSLoadBalancerControllerIAMPolicy --approve
 ```
 
 ---
