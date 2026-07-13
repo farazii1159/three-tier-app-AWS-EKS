@@ -369,12 +369,6 @@ Verify that the service account has been created successfully.
 kubectl get serviceaccount -n kube-system
 ```
 
-You should see:
-
-```text
-aws-load-balancer-controller
-```
-
 ---
 
 ## 📥 Add the Helm Repository
