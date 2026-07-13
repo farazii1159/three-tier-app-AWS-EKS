@@ -263,10 +263,10 @@ Amazon EKS uses an IAM OIDC provider to enable IAM Roles for Service Accounts (I
 
 ### Export the Cluster Name
 
-> **Replace the with your Cluster Name export cluster_name=<CLUSTER-NAME>**
+> **Replace the command with your cluster_name=<CLUSTER-NAME>**
 
 ```bash
-export cluster_name=demo-cluster-three-tier-1
+export cluster_name=<CLUSTER-NAME>
 ```
 
 ---
