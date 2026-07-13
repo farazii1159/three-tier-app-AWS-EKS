@@ -230,12 +230,7 @@ Now that we've tested the application locally, it’s time to deploy it on a ful
 We'll start by creating an EKS cluster using eksctl. This tool simplifies EKS cluster creation and management.
 
 ```bash
-
- eksctl create cluster \
-  --name demo-cluster-three-tier-1 \
-  --region us-east-1
-
-eksctl create cluster --name demo-cluster-three-tier-1 --region us-east-1
+eksctl create cluster -f cluster.yaml
 ```
 
 This command provisions an Amazon EKS cluster named `demo-cluster-three-tier-1` in the `us-east-2` (Ohio) region.

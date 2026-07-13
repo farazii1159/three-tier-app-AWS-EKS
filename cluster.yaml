@@ -12,7 +12,13 @@ iam:
 managedNodeGroups:
   - name: standard-workers
     instanceType: t3.small
-    minSize: 1
-    maxSize: 3
-    desiredCapacity: 2
+    minSize: 3
+    maxSize: 5
+    desiredCapacity: 3
     volumeSize: 20
+
+
+
+# E33929F2E13941C0B961E6AB95D18E5B
+
+    
