@@ -149,12 +149,10 @@ Before deploying the application to **Amazon EKS**, it is recommended to test th
 Clone the repository from GitHub and navigate to the project directory.
 
 ```bash
-git clone https://github.com/iam-veeramalla/three-tier-architecture-demo.git
+git clone https://github.com/farazii1159/three-tier-app-AWS-EKS.git
 
-cd three-tier-architecture-demo
+cd three-tier-app-AWS-EKS
 ```
-
-
 
 ## 📦 Step 2: Pull Docker Images
 
@@ -258,7 +256,7 @@ Amazon EKS uses an IAM OIDC provider to enable IAM Roles for Service Accounts (I
 
 ### Export the Cluster Name
 
-> **Replace the command with your cluster_name=`<CLUSTER-NAME>`**
+> **Replace the command with your cluster_name=`<CLUSTER-NAME>` in my casr my cluster name is `demo-cluster-three-tier-1`**
 
 ```bash
 export cluster_name=<CLUSTER-NAME>
