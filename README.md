@@ -256,7 +256,7 @@ Amazon EKS uses an IAM OIDC provider to enable IAM Roles for Service Accounts (I
 
 ### Export the Cluster Name
 
-> **Replace the command with your cluster_name=`<CLUSTER-NAME>` in my casr my cluster name is `demo-cluster-three-tier-1`**
+> **Replace the command with your cluster_name=`<CLUSTER-NAME>` in my case my cluster name is `demo-cluster-three-tier-1`**
 
 ```bash
 export cluster_name=<CLUSTER-NAME>
@@ -385,8 +385,6 @@ Install the controller into the **kube-system** namespace using Helm.
 > **Before running the command, replace `<CLUSTER-NAME>`, `<region>` and `<YOUR_VPC_ID>` with the VPC ID where your EKS cluster is deployed.**
 
 ```bash
-helm install aws-load-balancer-controller eks/aws-load-balancer-controller -n kube-system --set clustername=<CLUSTER-NAME> --set serviceAccount.create=false --set serviceAccount.name=aws-load-balancer-controller --set region=<region> --set vpcId=<YOUR_VPC_ID>
-
 helm install aws-load-balancer-controller eks/aws-load-balancer-controller \
   -n kube-system \
   --set clusterName=<CLUSTER-NAME> \
@@ -521,6 +519,7 @@ helm install robot-shop --namespace robot-shop .
 ### Verify the Deployment
 
 Verify that all Pods are running successfully.
+> Wait 5-10 minutes until all Pods Ready 1/1 
 
 ```bash
 kubectl get pods -n robot-shop
@@ -562,7 +561,7 @@ kubectl get ingress -n robot-shop
 ```
 ---
 
-### Wait for the Load Balancer
+### Now go to EC2 and Wait for the Load Balancer
 
 > Provisioning the AWS Application Load Balancer typically takes **5–10 minutes**.
 
@@ -619,6 +618,11 @@ To avoid unnecessary AWS charges, delete all resources created during this proje
 
 ```bash
 eksctl delete cluster --name demo-cluster-three-tier-1 --region us-east-2
+
+OR
+
+ eksctl delete cluster -f cluster.yaml
+ 
 ```
 
 This command deletes the EKS cluster and all associated AWS resources to help avoid unnecessary charges.
